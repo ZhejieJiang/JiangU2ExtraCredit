@@ -10,10 +10,10 @@ public class Calculator {
     public String add(){
         num1 = Double.parseDouble(equation.substring(0,equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
-        if (Math.ceil(num1+num2) == Math.floor(num1+num2)){
+        if (Math.ceil(num1+num2) == Math.floor(num1+num2)){ //IF int
             return Integer.toString((int)(num1+num2));
         }
-        else {
+        else { //double
             return Double.toString(num1+num2);
         }
     }
@@ -21,10 +21,10 @@ public class Calculator {
     public String subtract(){
         num1 = Double.parseDouble(equation.substring(0, equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
-        if (Math.ceil(num1-num2) == Math.floor(num1-num2)){
+        if (Math.ceil(num1-num2) == Math.floor(num1-num2)){ //IF int
             return Integer.toString((int)(num1-num2));
         }
-        else {
+        else {//double
             return Double.toString(num1-num2);
         }
     }
@@ -32,10 +32,10 @@ public class Calculator {
     public String multiply(){
         num1 = Double.parseDouble(equation.substring(0, equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
-        if (Math.ceil(num1*num2) == Math.floor(num1*num2)){
+        if (Math.ceil(num1*num2) == Math.floor(num1*num2)){//IF int
             return Integer.toString((int)(num1*num2));
         }
-        else {
+        else {//double
             return Double.toString(num1*num2);
         }
     }
@@ -43,20 +43,20 @@ public class Calculator {
     public String divide(){
         num1 = Double.parseDouble(equation.substring(0, equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
-        if (Math.ceil(num1/num2) == Math.floor(num1/num2)){
+        if (Math.ceil(num1/num2) == Math.floor(num1/num2)){//IF int
             return Integer.toString((int)(num1/num2));
         }
-        else {
+        else {//double
             return Double.toString(num1/num2);
         }
     }
     public String mod(){
         num1 = Double.parseDouble(equation.substring(0, equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
-        if (Math.ceil(num1%num2) == Math.floor(num1%num2)){
+        if (Math.ceil(num1%num2) == Math.floor(num1%num2)){ //IF int
             return Integer.toString((int)(num1%num2));
         }
-        else {
+        else {//double
             return Double.toString(num1%num2);
         }
     }
@@ -65,9 +65,9 @@ public class Calculator {
         num1 = Double.parseDouble(equation.substring(0, equation.indexOf(" ")));
         num2 = Double.parseDouble(equation.substring(equation.indexOf(" ") + 3));
         if (Math.ceil(Math.pow(num1,num2)) == Math.floor(Math.pow(num1,num2))){
-            return Integer.toString((int)(Math.pow(num1,num2)));
+            return Integer.toString((int)(Math.pow(num1,num2)));  //IF int
         }
-        else {
+        else {//double
             return Double.toString(Math.pow(num1,num2));
         }
     }
