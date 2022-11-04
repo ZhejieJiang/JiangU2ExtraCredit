@@ -2,24 +2,27 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[]args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter an expression with *, /, +, -, %, or ^:");
+        System.out.print("Enter an expression with *, /, +, -, %, or ^ in the format of x + y: ");
         String expression1 = scan.nextLine();
+
+        Calculator calc = new Calculator(expression1);
         if (expression1.contains("*")){
-            String sign = "*";}
+            System.out.println("Answer: " + calc.multiply());
+        }
         if (expression1.contains("/")){
-            String sign = "/";}
+            System.out.println("Answer: " + calc.divide());
+        }
         if (expression1.contains("+")){
-            String sign = "+";}
+            System.out.println("Answer: " + calc.add());
+        }
         if (expression1.contains("-")){
-            String sign = "-";}
+            System.out.println("Answer: " + calc.subtract());
+        }
         if (expression1.contains("%")){
-            String sign = "%";}
+            System.out.println("Answer: " + calc.mod());
+        }
         if (expression1.contains("^")){
-            String sign = "^";}
-        double num1 = Double.parseDouble(expression1.substring(0,expression1.indexOf(" ")));
-        double num2 = Double.parseDouble(expression1.substring(expression1.indexOf(" ") + 3));
-
-
-
+            System.out.println("Answer: " + calc.exponent());
+        }
     }
 }
